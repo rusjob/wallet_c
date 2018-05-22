@@ -7,11 +7,14 @@ if len(sys.argv) != 2 or sys.argv[1] == "--help":
     print("path_to_file\nFile format:\naddress wif")
     exit()
 
+    
 fname = sys.argv[1];
+
 
 with open(fname) as f:
     content = f.readlines()
 
+    
 for line in content:
     line = line.strip()
     if line:
@@ -23,3 +26,5 @@ for line in content:
             print("Ups " + addr)
         
 print("End");
+
+
